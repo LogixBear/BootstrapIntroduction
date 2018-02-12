@@ -1,0 +1,43 @@
+﻿@model string
+@{
+    ViewBag.Title = "CalcApp";
+}
+
+<h2>CalcApp</h2>
+
+<form action='/Home/CalcApp' method='post'>
+    <div>
+        <label for='first'>First Value:</label>
+        <input id='first' name='first' type='text' />
+        <label for='second'>Second Value:</label>
+        <input id='second' name='second' type='text' />
+    </div>
+    <div class='operators'>
+        <legend>Operator: </legend>
+        <input id='add'
+               name='operator'
+               type='radio'
+               value='add'
+               checked='checked' />
+        <label for='add' class='operators'>Add (+)</label></br>
+        <input id='subtract'
+               name='operator'
+               type='radio'
+               value='subtract' />
+        <label for='subtract' class='operators'>Subtract (-)</label></br>
+        <input id='multiply'
+               name='operator'
+               type='radio'
+               value='multiply' />
+        <label for='multiply' class='operators'>Multiply (*)</label></br>
+        <input id='divide'
+               name='operator'
+               type='radio'
+               value='divide' />
+        <label for='divide' class='operators'>Divide (/)</label>
+    </div></br>
+    <div>
+        <button>Submit</button>
+    </div>
+</form>
+@Model
